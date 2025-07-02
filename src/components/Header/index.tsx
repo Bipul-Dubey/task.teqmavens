@@ -4,6 +4,7 @@ import { Sheet, SheetTrigger } from "@/components/ui/sheet";
 import { Bell, ChevronDown, Menu, Search, SunMoon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { Avatar, AvatarFallback } from "../ui/avatar";
 
 const Header = () => {
   return (
@@ -35,7 +36,7 @@ const Header = () => {
         <div className="hidden md:flex items-center">
           <div className="relative w-[150px] h-[40px]">
             <Image
-              src="/company_logo.svg"
+              src="/company_logo_dark.svg"
               alt="Logo"
               fill
               className="object-contain"
@@ -73,9 +74,9 @@ const Header = () => {
 
           {/* User */}
           <div className="flex items-center gap-2  px-2 py-1 cursor-pointer transition-colors hover:bg-muted/50 border-border">
-            <div className="h-8 w-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-medium">
-              MS
-            </div>
+            <Avatar className="h-9 w-9">
+              <AvatarFallback className="bg-purple-400">MS</AvatarFallback>
+            </Avatar>
             <div className="hidden sm:flex flex-col leading-tight text-xs">
               <span className="font-medium">Manoj Sharma</span>
               <span className="text-muted-foreground">Super Admin</span>

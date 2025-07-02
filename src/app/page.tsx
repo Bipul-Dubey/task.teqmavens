@@ -1,3 +1,4 @@
+import AccountDetails from "@/components/AccountDetails";
 import Header from "@/components/Header";
 import SubHeader from "@/components/Subheader";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -8,6 +9,7 @@ export default function Home() {
       <ScrollArea className="h-dvh">
         <Header />
         <SubHeader />
+        <AccountDetails />
       </ScrollArea>
     </div>
   );
