@@ -7,7 +7,7 @@ const tabs = ["day", "week", "year"];
 export function TimeTabs() {
   return (
     <Tabs defaultValue="day" className="w-fit">
-      <TabsList className="bg-b-background border border-border] p-[2px] rounded-[10px] w-fit">
+      <TabsList className="bg-b-background border border-border] p-0 rounded-[10px] w-fit">
         {tabs.map((tab) => (
           <TabsTrigger
             key={tab}
