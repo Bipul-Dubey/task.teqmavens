@@ -62,13 +62,14 @@ const Header = () => {
           <Button
             variant="ghost"
             size="icon"
+            className="hidden md:flex"
             // onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           >
             <SunMoon className="h-5 w-5" />
           </Button>
 
           {/* Notification */}
-          <Button variant="ghost" size="icon">
+          <Button variant="ghost" size="icon" className="hidden md:flex">
             <Bell className="h-5 w-5" />
           </Button>
 
