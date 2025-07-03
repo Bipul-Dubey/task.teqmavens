@@ -94,7 +94,6 @@ export function AccountDetailsCard({
                 Jillali@Onechanneladmin.Com
               </p>
             </div>
-            <Plus className="h-4 w-4 text-primary mt-5" />
           </div>
         </div>
 
