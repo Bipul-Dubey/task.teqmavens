@@ -7,6 +7,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import {
+  CalendarDays,
   PackageCheck,
   RotateCcw,
   Send,
@@ -16,6 +17,7 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import React from "react";
+import { OrderStatusPieChart } from "./OrderStatusChart";
 
 type OrderProps = {
   icon: React.ReactNode;
@@ -67,13 +69,14 @@ const statusItems: OrderProps[] = [
     value: 50,
   },
 ];
+const years = Array.from({ length: 10 }, (_, i) => `${2025 - i}`);
 
 const OrderStatus = () => {
   return (
-    <Card className="w-full gap-0 md:w-1/2 p-0 bg-b-background">
+    <Card className="w-full gap-0 md:w-[49.2%] p-0 bg-b-background">
       <CardHeader className="p-4 py-2 flex justify-between items-center border-b-2">
         <CardTitle className="text-xl">Order Status</CardTitle>
-        <div>
+        <div className="flex gap-x-2">
           <Select defaultValue="all">
             <SelectTrigger className="w-[140px] h-8 text-xs">
               <SelectValue placeholder="All Categories" />
@@ -82,6 +85,21 @@ const OrderStatus = () => {
               <SelectItem value="all">All Categories</SelectItem>
               <SelectItem value="fashion">Fashion</SelectItem>
               <SelectItem value="electronics">Electronics</SelectItem>
+            </SelectContent>
+          </Select>
+          <Select defaultValue="2023">
+            <SelectTrigger className="w-[100px] h-9 px-3 text-sm border  bg-background/40 hover:bg-background/60 transition">
+              <div className="flex items-center justify-between w-full">
+                <SelectValue />
+                <CalendarDays className="h-4 w-4 text-white ml-2" />
+              </div>
+            </SelectTrigger>
+            <SelectContent>
+              {years.map((year) => (
+                <SelectItem key={year} value={year}>
+                  {year}
+                </SelectItem>
+              ))}
             </SelectContent>
           </Select>
         </div>
@@ -106,10 +124,8 @@ const OrderStatus = () => {
           })}
         </div>
         <div className="w-1/2 flex items-center justify-center">
-          <div className="w-44 h-44 rounded-full bg-muted flex items-center justify-center text-3xl font-bold text-primary">
-            250
-          </div>
-        </div>{" "}
+          <OrderStatusPieChart />
+        </div>
       </CardContent>
     </Card>
   );

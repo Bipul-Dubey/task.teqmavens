@@ -6,7 +6,8 @@ const AccountDashboard = () => {
   return (
     <div className="w-full">
       <TopSectionCards />
-      <div>
+      <div className="flex gap-4 flex-wrap">
+        <OrderStatus />
         <OrderStatus />
       </div>
     </div>
