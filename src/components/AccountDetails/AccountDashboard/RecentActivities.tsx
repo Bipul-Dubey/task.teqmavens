@@ -22,7 +22,6 @@ interface ActivityContent {
 interface Activity {
   icon: {
     bg: string;
-    src: string;
   };
   content: ActivityContent[];
 }
@@ -37,7 +36,7 @@ const recentActivities: RecentActivitySection[] = [
     date: "TODAY",
     activities: [
       {
-        icon: { bg: "bg-[#F4A120]", src: "/chat-1-fill.svg" },
+        icon: { bg: "bg-[#F4A120]" },
         content: [
           {
             primary: "Christian Wood",
@@ -56,7 +55,7 @@ const recentActivities: RecentActivitySection[] = [
         ],
       },
       {
-        icon: { bg: "bg-[#E24C5B]", src: "/chat-1-fill.svg" },
+        icon: { bg: "bg-[#E24C5B]" },
         content: [
           {
             primary: "Christian Wood",
@@ -86,7 +85,7 @@ const recentActivities: RecentActivitySection[] = [
     date: "YESTERDAY",
     activities: [
       {
-        icon: { bg: "bg-[#8e57e1]", src: "/chat-1-fill.svg" },
+        icon: { bg: "bg-[#8e57e1]" },
         content: [
           {
             primary: "Christian Wood",
@@ -102,7 +101,7 @@ const recentActivities: RecentActivitySection[] = [
     date: "25 MAY 2024",
     activities: [
       {
-        icon: { bg: "bg-[#2C8DFB]", src: "/chat-1-fill.svg" },
+        icon: { bg: "bg-[#2C8DFB]" },
         content: [
           {
             primary: "Christian Wood",
@@ -113,7 +112,7 @@ const recentActivities: RecentActivitySection[] = [
         ],
       },
       {
-        icon: { bg: "bg-[#2C8DFB]", src: "/chat-1-fill.svg" },
+        icon: { bg: "bg-[#2C8DFB]" },
         content: [
           {
             primary: "Christian Wood",
@@ -149,7 +148,7 @@ const RecentActivities: React.FC = () => {
                     className={`w-6 h-6 flex items-center justify-center ${activity.icon.bg} rounded-full`}
                   >
                     <Image
-                      src={activity.icon.src}
+                      src="/icons/chat_1_fill.svg"
                       className="w-4 h-4"
                       alt="icon"
                       height={10}
@@ -181,10 +180,10 @@ const RecentActivities: React.FC = () => {
                           key={replyIndex}
                           className="flex items-center gap-2 text-sm text-muted-foreground"
                         >
-                          <div className="w-6 h-6 flex items-center justify-center bg-muted rounded-full">
+                          <div className="w-6 h-6 flex items-center justify-center rounded-full bg-gray-300">
                             <Image
-                              src="/back-2-fill.svg"
-                              className="w-4 h-4"
+                              src="/icons/back-2-fill.svg"
+                              className="w-4 h-4 bg"
                               alt="reply icon"
                               height={10}
                               width={10}

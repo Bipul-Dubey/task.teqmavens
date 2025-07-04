@@ -1,6 +1,6 @@
 "use client";
 
-import { Customer } from "@/components/common";
+import { CompanyLogo, Customer } from "@/components/common";
 import { DataTable } from "@/components/Table";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
@@ -43,15 +43,7 @@ const RecentOrders = () => {
               <span>iPhone 15 pro max</span>
             </div>
           ),
-          channel: (
-            <Image
-              height={10}
-              width={10}
-              src="/icons/ebay.svg"
-              alt="ebay"
-              className="h-5"
-            />
-          ),
+          channel: <CompanyLogo src="/icons/ebay.svg" alt="ebay_logo" />,
           customer: <Customer name="Gabriella Golden" />,
           amount: "$400.00",
           date: "Today",
@@ -71,15 +63,7 @@ const RecentOrders = () => {
               <span>White Danim Tshit M...</span>
             </div>
           ),
-          channel: (
-            <Image
-              height={10}
-              width={10}
-              src="/icons/walmart.svg"
-              alt="Walmart"
-              className="h-5"
-            />
-          ),
+          channel: <CompanyLogo src="/icons/walmart.svg" alt="walmart_logo" />,
           customer: <Customer name="Harris Santana" />,
           amount: "$151.00",
           date: "Today",
@@ -99,15 +83,7 @@ const RecentOrders = () => {
               <span>White Danim Tshit M...</span>
             </div>
           ),
-          channel: (
-            <Image
-              height={10}
-              width={10}
-              src="/icons/walmart.svg"
-              alt="Walmart"
-              className="h-5"
-            />
-          ),
+          channel: <CompanyLogo src="/icons/walmart.svg" alt="walmart_logo" />,
           customer: <Customer name="Harris Santana" />,
           amount: "$151.00",
           date: "Today",
@@ -127,15 +103,7 @@ const RecentOrders = () => {
               <span>White Danim Tshit M...</span>
             </div>
           ),
-          channel: (
-            <Image
-              height={10}
-              width={10}
-              src="/icons/walmart.svg"
-              alt="Walmart"
-              className="h-5"
-            />
-          ),
+          channel: <CompanyLogo src="/icons/walmart.svg" alt="walmart_logo" />,
           customer: <Customer name="Harris Santana" />,
           amount: "$151.00",
           date: "Today",
@@ -156,13 +124,7 @@ const RecentOrders = () => {
             </div>
           ),
           channel: (
-            <Image
-              height={10}
-              width={10}
-              src="/icons/facebook.svg"
-              alt="Facebook"
-              className="h-5"
-            />
+            <CompanyLogo src="/icons/facebook.svg" alt="facebook_logo" />
           ),
           customer: <Customer name="Lilia Ponce" />,
           amount: "$167.00",
@@ -176,22 +138,14 @@ const RecentOrders = () => {
               <Image
                 height={10}
                 width={10}
-                src="/icons/samsung.png"
+                src="/icons/samsung.svg"
                 alt="Samsung"
                 className="h-5 w-5"
               />
               <span>Samsung i-20 serie...</span>
             </div>
           ),
-          channel: (
-            <Image
-              height={10}
-              width={10}
-              src="/icons/amazon.svg"
-              alt="Amazon"
-              className="h-5"
-            />
-          ),
+          channel: <CompanyLogo src="/icons/amazon.svg" alt="amazon_logo" />,
           customer: <Customer name="Rehan Chase" />,
           amount: "$262.00",
           date: "Tomorrow",
@@ -211,15 +165,7 @@ const RecentOrders = () => {
               <span>Nykaa Red lipstick</span>
             </div>
           ),
-          channel: (
-            <Image
-              height={10}
-              width={10}
-              src="/icons/etsy.svg"
-              alt="Etsy"
-              className="h-5"
-            />
-          ),
+          channel: <CompanyLogo src="/icons/etsy.svg" alt="etsy_logo" />,
           customer: <Customer name="Maxim Bray" />,
           amount: "$319.00",
           date: "05/01/2023",

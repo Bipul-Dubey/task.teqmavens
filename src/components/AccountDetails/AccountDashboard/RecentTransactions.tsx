@@ -1,6 +1,6 @@
 "use client";
 
-import { Customer } from "@/components/common";
+import { CompanyLogo, Customer } from "@/components/common";
 import { DataTable } from "@/components/Table";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
@@ -41,15 +41,7 @@ const RecentTransactions = () => {
               <span className="truncate max-w-[160px]">iPhone 15 pro max</span>
             </div>
           ),
-          channel: (
-            <Image
-              height={10}
-              width={10}
-              src="/icons/ebay.svg"
-              alt="ebay"
-              className="h-5"
-            />
-          ),
+          channel: <CompanyLogo src="/icons/ebay.svg" alt="ebay_logo" />,
           customer: <Customer name="Gabriella Golden" />,
           total: "$400.00",
         },
@@ -69,15 +61,7 @@ const RecentTransactions = () => {
               </span>
             </div>
           ),
-          channel: (
-            <Image
-              height={10}
-              width={10}
-              src="/icons/walmart.svg"
-              alt="Walmart"
-              className="h-5"
-            />
-          ),
+          channel: <CompanyLogo src="/icons/walmart.svg" alt="walmart_logo" />,
           customer: <Customer name="Harris Santana" />,
           total: "$151.00",
         },
@@ -98,13 +82,7 @@ const RecentTransactions = () => {
             </div>
           ),
           channel: (
-            <Image
-              height={10}
-              width={10}
-              src="/icons/facebook.svg"
-              alt="Facebook"
-              className="h-5"
-            />
+            <CompanyLogo src="/icons/facebook.svg" alt="facebook_logo" />
           ),
           customer: <Customer name="Lilia Ponce" />,
           total: "$167.00",
@@ -125,15 +103,7 @@ const RecentTransactions = () => {
               </span>
             </div>
           ),
-          channel: (
-            <Image
-              height={10}
-              width={10}
-              src="/icons/amazon.svg"
-              alt="Amazon"
-              className="h-5"
-            />
-          ),
+          channel: <CompanyLogo src="/icons/amazon.svg" alt="amazon_logo" />,
           customer: <Customer name="Rehan Chase" />,
           total: "$262.00",
         },
@@ -151,15 +121,7 @@ const RecentTransactions = () => {
               <span className="truncate max-w-[160px]">Nykaa Red lipstick</span>
             </div>
           ),
-          channel: (
-            <Image
-              height={10}
-              width={10}
-              src="/icons/etsy.svg"
-              alt="Etsy"
-              className="h-5"
-            />
-          ),
+          channel: <CompanyLogo src="/icons/etsy.svg" alt="etsy_logo" />,
           customer: <Customer name="Maxim Bray" />,
           total: "$319.00",
         },
