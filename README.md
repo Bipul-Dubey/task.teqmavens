@@ -1,6 +1,4 @@
-# Project Name
-
-Teq Mavens
+# Teq Mavens - Task
 
 ---
 
