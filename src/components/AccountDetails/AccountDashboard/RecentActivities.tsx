@@ -180,7 +180,7 @@ const RecentActivities: React.FC = () => {
                           key={replyIndex}
                           className="flex items-center gap-2 text-sm text-muted-foreground"
                         >
-                          <div className="w-6 h-6 flex items-center justify-center rounded-full bg-gray-300">
+                          <div className="w-6 h-6 flex items-center justify-center rounded-full bg-gray-300 dark:bg-muted">
                             <Image
                               src="/icons/back-2-fill.svg"
                               className="w-4 h-4 bg"
