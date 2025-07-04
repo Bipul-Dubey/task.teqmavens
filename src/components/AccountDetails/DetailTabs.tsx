@@ -42,7 +42,7 @@ export default function AccountDetailTabs() {
       </div>
 
       {/* Container */}
-      <div className="relative -mt-px border border-border rounded-md rounded-t-none p-4 bg-b-background min-w-[480px]">
+      <div className="relative -mt-px border border-border rounded-md rounded-t-none p-4 bg-b-background min-w-90">
         <div className="text-sm text-muted-foreground">
           {(() => {
             switch (activeTab) {

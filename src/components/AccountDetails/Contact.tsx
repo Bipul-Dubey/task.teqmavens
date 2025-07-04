@@ -9,7 +9,7 @@ export function Contact() {
   ];
 
   return (
-    <div className="flex w-full max-w-96 items-center justify-between rounded-2xl border border-border bg-b-light-background px-6 py-4 shadow-sm">
+    <div className="flex w-full min-w-90 items-center justify-between rounded-2xl border border-border bg-b-light-background px-6 py-4 shadow-sm">
       {actions.map(({ label, icon: Icon }) => (
         <div
           key={label}

@@ -38,7 +38,7 @@ export function AccountDetailsCard({
   );
 
   return (
-    <div className="relative w-full max-w-96 rounded-xl border bg-b-light-background shadow-sm p-4">
+    <div className="relative w-full min-w-90 rounded-xl border bg-b-light-background shadow-sm p-4">
       {/* Top-right icons */}
       <div className="absolute top-4 right-4 flex gap-2">
         <Pencil

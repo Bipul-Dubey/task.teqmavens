@@ -73,7 +73,7 @@ const years = Array.from({ length: 10 }, (_, i) => `${2025 - i}`);
 
 const OrderStatus = () => {
   return (
-    <Card className="w-full gap-0 max-h-[500px] md:w-full lg:w-[49.2%] min-w-md p-0 bg-b-light-background">
+    <Card className="w-full gap-0 xl:w-[49.2%] min-w-90 p-0 bg-b-light-background">
       <CardHeader className="p-4 py-2 flex justify-between items-center border-b-2">
         <CardTitle className="text-xl">Order Status</CardTitle>
         <div className="flex gap-x-2">
@@ -95,8 +95,8 @@ const OrderStatus = () => {
           </Select>
         </div>
       </CardHeader>
-      <CardContent className="flex p-0 h-full">
-        <div className="grid grid-cols-2 grid-rows-3 w-1/2">
+      <CardContent className="flex p-0 h-full flex-wrap">
+        <div className="grid grid-cols-2 grid-rows-3 w-full md:w-1/2">
           {statusItems.map((item, index) => {
             const isRightCol = index % 2 === 1;
             const isBottomRow = index >= 4;
@@ -114,7 +114,7 @@ const OrderStatus = () => {
             );
           })}
         </div>
-        <div className="w-1/2 flex items-center justify-center">
+        <div className="w-full md:w-1/2 flex items-center justify-center">
           <OrderStatusPieChart />
         </div>
       </CardContent>

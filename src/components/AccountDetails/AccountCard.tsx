@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 export function AccountCard() {
   return (
-    <div className="flex items-start justify-between w-full max-w-96 rounded-xl border bg-b-light-background p-4 shadow-sm">
+    <div className="flex items-start justify-between w-full min-w-90 rounded-xl border bg-b-light-background p-4 shadow-sm">
       {/* Left Section */}
       <div className="flex items-center gap-4">
         <div className="relative">

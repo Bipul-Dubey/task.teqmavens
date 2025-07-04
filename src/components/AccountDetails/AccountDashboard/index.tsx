@@ -12,7 +12,7 @@ const AccountDashboard = () => {
   return (
     <div className="w-full flex flex-col gap-y-4">
       <TopSectionCards />
-      <div className="flex gap-4 flex-wrap">
+      <div className="space-x-4 space-y-4 flex-wrap lg:flex">
         <OrderStatus />
         <RecentActivities />
       </div>
