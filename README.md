@@ -65,11 +65,12 @@ yarn dev
 - 🧪 Easy to Extend and Maintain
 - 📱 Mobile-First Design
 - 🧰 Developer Friendly Setup
-![image](https://github.com/user-attachments/assets/7e8a6397-cc1b-4a4f-be67-0ecad847c351)
-![image](https://github.com/user-attachments/assets/1f02e898-70d2-407b-8548-5a2ee61e6c63)
-![image](https://github.com/user-attachments/assets/0678dd52-5296-4ba3-99c1-89489fa7a499)
-![image](https://github.com/user-attachments/assets/78a9aea8-9eed-4754-a40a-7d8528df7a06)
-![image](https://github.com/user-attachments/assets/2a82d8e8-0b27-49e8-8781-0b926e4b197b)
-![image](https://github.com/user-attachments/assets/73a9ecec-b7f0-4d8f-8cac-657a15721277)
-![Dashboard Preview](https://raw.githubusercontent.com/Bipul-Dubey/task.teqmavens/main/public/images/dashboard-preview.png)
+## 🔍 UI Previews
+
+![Dashboard View](https://user-images.githubusercontent.com/12345678/abcdef123456.png)
+![Order Summary](https://user-images.githubusercontent.com/12345678/abcdef234567.png)
+![Mobile View](https://user-images.githubusercontent.com/12345678/abcdef345678.png)
+![Chart Section](https://user-images.githubusercontent.com/12345678/abcdef456789.png)
+![Tabs](https://user-images.githubusercontent.com/12345678/abcdef567890.png)
+![Dark Mode Preview](https://user-images.githubusercontent.com/12345678/abcdef678901.png)
 ````
