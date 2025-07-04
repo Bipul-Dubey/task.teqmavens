@@ -71,5 +71,5 @@ yarn dev
 ![image](https://github.com/user-attachments/assets/78a9aea8-9eed-4754-a40a-7d8528df7a06)
 ![image](https://github.com/user-attachments/assets/2a82d8e8-0b27-49e8-8781-0b926e4b197b)
 ![image](https://github.com/user-attachments/assets/73a9ecec-b7f0-4d8f-8cac-657a15721277)
-
+![Dashboard Preview](https://raw.githubusercontent.com/Bipul-Dubey/task.teqmavens/main/public/images/dashboard-preview.png)
 ````
