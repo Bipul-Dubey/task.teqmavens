@@ -128,7 +128,7 @@ const recentActivities: RecentActivitySection[] = [
 
 const RecentActivities: React.FC = () => {
   return (
-    <Card className="w-full gap-0 max-h-[500px] md:w-full lg:w-[49.2%] min-w-md p-0 bg-b-background">
+    <Card className="w-full gap-0 max-h-[500px] md:w-full lg:w-[49.2%] min-w-md p-0 bg-b-light-background">
       <CardHeader className="p-4 py-2 flex justify-between items-center border-b-2">
         <CardTitle className="text-lg font-semibold text-foreground">
           Recent Activities

@@ -11,7 +11,7 @@ const Header = () => {
   const { theme, setTheme } = useTheme();
   const isDark = theme === "dark";
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-b-background">
+    <header className="sticky top-0 z-50 w-full border-b bg-b-light-background">
       <div className="flex h-16 items-center justify-between px-4">
         {/* Mobile Menu Button */}
         <div className="flex items-center gap-2 md:hidden">

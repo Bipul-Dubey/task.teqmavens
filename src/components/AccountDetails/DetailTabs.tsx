@@ -30,7 +30,7 @@ export default function AccountDetailTabs() {
               className={cn(
                 "px-4 py-1.5 text-sm font-medium rounded-t-md border border-border bg-background transition-colors",
                 isActive
-                  ? "text-[#7B61FF] border-b-transparent"
+                  ? "text-[#7B61FF] border-b-transparent bg-b-background"
                   : "text-muted-foreground"
               )}
             >
@@ -41,7 +41,7 @@ export default function AccountDetailTabs() {
       </div>
 
       {/* Container */}
-      <div className="relative -mt-px border border-border rounded-md rounded-t-none p-4 bg-background">
+      <div className="relative -mt-px border border-border rounded-md rounded-t-none p-4 bg-b-background">
         <div className="text-sm text-muted-foreground">
           {(() => {
             switch (activeTab) {

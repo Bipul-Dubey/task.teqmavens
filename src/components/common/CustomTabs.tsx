@@ -11,9 +11,10 @@ export function CustomTabs({ tabs }: { tabs: string[] }) {
             key={tab}
             value={tab}
             className="px-4 py-1.5 text-sm rounded-[8px] transition-colors
-              text-muted-foreground
-              data-[state=active]:bg-highlight-blue
-              data-[state=active]:text-white"
+    text-muted-foreground
+    data-[state=active]:bg-blue-600
+    dark:data-[state=active]:bg-blue-400
+    data-[state=active]:text-white"
           >
             {tab.charAt(0).toUpperCase() + tab.slice(1)}
           </TabsTrigger>

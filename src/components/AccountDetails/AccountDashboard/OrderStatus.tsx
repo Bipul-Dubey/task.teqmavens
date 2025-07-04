@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import React from "react";
 import { OrderStatusPieChart } from "./OrderStatusChart";
+import CategorySelection from "@/components/common/CategorySelection";
 
 type OrderProps = {
   icon: React.ReactNode;
@@ -72,20 +73,11 @@ const years = Array.from({ length: 10 }, (_, i) => `${2025 - i}`);
 
 const OrderStatus = () => {
   return (
-    <Card className="w-full gap-0 max-h-[500px] md:w-full lg:w-[49.2%] min-w-md p-0 bg-b-background">
+    <Card className="w-full gap-0 max-h-[500px] md:w-full lg:w-[49.2%] min-w-md p-0 bg-b-light-background">
       <CardHeader className="p-4 py-2 flex justify-between items-center border-b-2">
         <CardTitle className="text-xl">Order Status</CardTitle>
         <div className="flex gap-x-2">
-          <Select defaultValue="all">
-            <SelectTrigger className="w-[140px] h-8 text-xs">
-              <SelectValue placeholder="All Categories" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="all">All Categories</SelectItem>
-              <SelectItem value="fashion">Fashion</SelectItem>
-              <SelectItem value="electronics">Electronics</SelectItem>
-            </SelectContent>
-          </Select>
+          <CategorySelection />
           <Select defaultValue="2023">
             <SelectTrigger className="w-[100px] h-9 px-3 text-sm border  bg-background/40 hover:bg-background/60 transition">
               <div className="flex items-center justify-between w-full">

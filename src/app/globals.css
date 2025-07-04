@@ -8,6 +8,7 @@
   --color-highlight-blue: var(--highlight-blue);
   --color-foreground: var(--foreground);
   --color-b-background: var(--b-background);
+  --color-b-light-background: var(--b-light-background);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -47,6 +48,7 @@
 
 :root {
   --b-background: oklch(0.985 0 0);
+  --b-light-background: oklch(0.985 0 0);
   --highlight-blue: oklch(0.55 0.2 282.5);
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -84,6 +86,7 @@
 
 .dark {
   --b-background: #001121;
+  --b-light-background: #010d1a;
   --highlight-blue: oklch(0.55 0.2 282.5);
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
