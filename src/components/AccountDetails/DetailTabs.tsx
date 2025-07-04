@@ -20,7 +20,7 @@ export default function AccountDetailTabs() {
   return (
     <div className="w-full">
       {/* Tab list */}
-      <div className="relative z-10 flex gap-1 ">
+      <div className="relative z-10 flex gap-1 overflow-x-auto">
         {tabs.map((tab) => {
           const isActive = tab === activeTab;
           return (
@@ -29,6 +29,7 @@ export default function AccountDetailTabs() {
               onClick={() => setActiveTab(tab)}
               className={cn(
                 "px-4 py-1.5 text-sm font-medium rounded-t-md border border-border bg-background transition-colors",
+                "min-w-fit",
                 isActive
                   ? "text-[#7B61FF] border-b-transparent bg-b-background"
                   : "text-muted-foreground"
@@ -41,7 +42,7 @@ export default function AccountDetailTabs() {
       </div>
 
       {/* Container */}
-      <div className="relative -mt-px border border-border rounded-md rounded-t-none p-4 bg-b-background">
+      <div className="relative -mt-px border border-border rounded-md rounded-t-none p-4 bg-b-background min-w-[480px]">
         <div className="text-sm text-muted-foreground">
           {(() => {
             switch (activeTab) {

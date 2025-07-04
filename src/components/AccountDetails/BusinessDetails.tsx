@@ -260,38 +260,6 @@ export function EditBusinessDetails({
           </div>
         ))}
       </div>
-
-      {/* Company Type & Industry */}
-      <div className="flex flex-wrap gap-4">
-        <div className="flex-1 min-w-[200px] space-y-1">
-          <label className="text-xs font-medium text-muted-foreground">
-            Company Type
-          </label>
-          <Input className="w-full" placeholder="Enter company type" />
-        </div>
-        <div className="flex-1 min-w-[200px] space-y-1">
-          <label className="text-xs font-medium text-muted-foreground">
-            Industry
-          </label>
-          <Input className="w-full" placeholder="Enter industry" />
-        </div>
-      </div>
-
-      {/* Website & No of Employees */}
-      <div className="flex flex-wrap gap-4">
-        <div className="flex-1 min-w-[200px] space-y-1">
-          <label className="text-xs font-medium text-muted-foreground">
-            Website
-          </label>
-          <Input className="w-full" placeholder="Enter website" />
-        </div>
-        <div className="flex-1 min-w-[200px] space-y-1">
-          <label className="text-xs font-medium text-muted-foreground">
-            No of Employees
-          </label>
-          <Input type="number" className="w-full" placeholder="Enter number" />
-        </div>
-      </div>
     </div>
   );
 }
