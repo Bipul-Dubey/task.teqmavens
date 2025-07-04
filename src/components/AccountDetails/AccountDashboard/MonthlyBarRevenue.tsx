@@ -31,12 +31,12 @@ export default function MonthlyRevenueChart() {
   // const { theme } = useTheme();
   const theme = "dark";
 
-  const barColor = theme === "dark" ? "#a78bfa" : "#6366f1"; // purple-400 / indigo-500
+  const barColor = theme === "dark" ? "#8378FF" : "#6366f1";
 
   return (
     <div className="w-full">
       <CardContent className="p-4">
-        <ResponsiveContainer width="100%" height={300}>
+        <ResponsiveContainer width="100%" height={370}>
           <BarChart data={data}>
             <CartesianGrid strokeDasharray="3 3" strokeOpacity={0.1} />
             <XAxis dataKey="month" stroke="currentColor" />
