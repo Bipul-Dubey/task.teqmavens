@@ -1,29 +1,74 @@
 "use client";
 
-import { Sheet, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { Bell, ChevronDown, Menu, Moon, Search, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { Avatar, AvatarFallback } from "../ui/avatar";
 import { useTheme } from "next-themes";
+import React, { useState } from "react";
 
 const Header = () => {
   const { theme, setTheme } = useTheme();
   const isDark = theme === "dark";
+  const [open, setOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-b-light-background">
       <div className="flex h-16 items-center justify-between px-4">
         {/* Mobile Menu Button */}
         <div className="flex items-center gap-2 md:hidden">
-          <Sheet>
+          <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
                 <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
-            {/* <SheetContent side="left">
-              <div className="p-4 font-semibold">Sidebar</div>
-            </SheetContent> */}
+            <SheetContent side="left" className="w-64 p-0">
+              <div className="flex flex-col gap-2 p-4">
+                {/* Logo */}
+                <div className="relative w-[120px] h-[32px] mb-4">
+                  <Image
+                    src={
+                      isDark
+                        ? "/company_logo_dark.svg"
+                        : "/company_logo_light.svg"
+                    }
+                    alt="Logo"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                {/* Theme Toggle */}
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="flex items-center gap-2 justify-start"
+                  onClick={() => setTheme(isDark ? "light" : "dark")}
+                >
+                  {isDark ? (
+                    <>
+                      <Sun className="h-5 w-5" />
+                      <span>Light Mode</span>
+                    </>
+                  ) : (
+                    <>
+                      <Moon className="h-5 w-5" />
+                      <span>Dark Mode</span>
+                    </>
+                  )}
+                </Button>
+                {/* Notification */}
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="flex items-center gap-2 justify-start"
+                >
+                  <Bell className="h-5 w-5" />
+                  <span>Notifications</span>
+                </Button>
+              </div>
+            </SheetContent>
           </Sheet>
           <div className="hidden md:flex relative w-[160px] h-[40px]">
             <Image

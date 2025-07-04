@@ -156,7 +156,7 @@ export function EditBusinessDetails({
   };
 
   return (
-    <div className="w-full max-w-96 rounded-xl border bg-b-light-background p-4 shadow-sm space-y-4">
+    <div className="w-full min-w-90 rounded-xl border bg-b-light-background p-4 shadow-sm space-y-4">
       {/* Header */}
       <div className="flex items-center justify-between">
         <h2 className="text-base font-semibold text-foreground">
