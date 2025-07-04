@@ -1,6 +1,7 @@
 import React from "react";
 import TopSectionCards from "./TopSectionCards";
 import OrderStatus from "./OrderStatus";
+import RecentActivities from "./RecentActivities";
 
 const AccountDashboard = () => {
   return (
@@ -8,7 +9,7 @@ const AccountDashboard = () => {
       <TopSectionCards />
       <div className="flex gap-4 flex-wrap">
         <OrderStatus />
-        <OrderStatus />
+        <RecentActivities />
       </div>
     </div>
   );

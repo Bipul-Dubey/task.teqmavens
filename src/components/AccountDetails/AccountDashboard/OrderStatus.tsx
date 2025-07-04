@@ -15,7 +15,6 @@ import {
   Truck,
   Users,
 } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
 import React from "react";
 import { OrderStatusPieChart } from "./OrderStatusChart";
 
@@ -27,7 +26,7 @@ type OrderProps = {
 
 const Order = ({ icon, label, value }: OrderProps) => {
   return (
-    <div className="flex items-center gap-4 p-4">
+    <div className="flex items-center justify-center h-full gap-4 p-4">
       <div className="text-primary">{icon}</div>
       <div>
         <p className="text-sm text-muted-foreground">{label}</p>
@@ -73,7 +72,7 @@ const years = Array.from({ length: 10 }, (_, i) => `${2025 - i}`);
 
 const OrderStatus = () => {
   return (
-    <Card className="w-full gap-0 md:w-[49.2%] p-0 bg-b-background">
+    <Card className="w-full gap-0 max-h-[500px] md:w-full lg:w-[49.2%] min-w-md p-0 bg-b-background">
       <CardHeader className="p-4 py-2 flex justify-between items-center border-b-2">
         <CardTitle className="text-xl">Order Status</CardTitle>
         <div className="flex gap-x-2">
@@ -104,7 +103,7 @@ const OrderStatus = () => {
           </Select>
         </div>
       </CardHeader>
-      <CardContent className="flex p-0">
+      <CardContent className="flex p-0 h-full">
         <div className="grid grid-cols-2 grid-rows-3 w-1/2">
           {statusItems.map((item, index) => {
             const isRightCol = index % 2 === 1;

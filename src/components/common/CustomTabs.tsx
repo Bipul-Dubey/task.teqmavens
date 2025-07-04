@@ -2,11 +2,9 @@
 
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-const tabs = ["day", "week", "year"];
-
-export function TimeTabs() {
+export function CustomTabs({ tabs }: { tabs: string[] }) {
   return (
-    <Tabs defaultValue="day" className="w-fit">
+    <Tabs defaultValue={tabs?.at(0) ?? ""} className="w-fit">
       <TabsList className="bg-b-background border border-border] p-0 rounded-[10px] w-fit">
         {tabs.map((tab) => (
           <TabsTrigger
