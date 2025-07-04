@@ -1,12 +1,15 @@
 "use client";
 
 import { Sheet, SheetTrigger } from "@/components/ui/sheet";
-import { Bell, ChevronDown, Menu, Search, SunMoon } from "lucide-react";
+import { Bell, ChevronDown, Menu, Moon, Search, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { Avatar, AvatarFallback } from "../ui/avatar";
+import { useTheme } from "next-themes";
 
 const Header = () => {
+  const { theme, setTheme } = useTheme();
+  const isDark = theme === "dark";
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-b-background">
       <div className="flex h-16 items-center justify-between px-4">
@@ -35,12 +38,21 @@ const Header = () => {
         {/* Desktop Logo */}
         <div className="hidden md:flex items-center">
           <div className="relative w-[150px] h-[40px]">
-            <Image
-              src="/company_logo_dark.svg"
-              alt="Logo"
-              fill
-              className="object-contain"
-            />
+            {isDark ? (
+              <Image
+                src={`/company_logo_dark.svg`}
+                alt="Logo"
+                fill
+                className="object-contain"
+              />
+            ) : (
+              <Image
+                src={`/company_logo_light.svg`}
+                alt="Logo"
+                fill
+                className="object-contain"
+              />
+            )}
           </div>
         </div>
 
@@ -60,16 +72,20 @@ const Header = () => {
         <div className="flex items-center gap-2">
           {/* Theme Toggle */}
           <Button
-            variant="ghost"
+            variant="outline"
             size="icon"
             className="hidden md:flex"
-            // onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            onClick={() => setTheme(isDark ? "light" : "dark")}
           >
-            <SunMoon className="h-5 w-5" />
+            {isDark ? (
+              <Sun className="h-5 w-5" />
+            ) : (
+              <Moon className="h-5 w-5" />
+            )}
           </Button>
 
           {/* Notification */}
-          <Button variant="ghost" size="icon" className="hidden md:flex">
+          <Button variant="outline" size="icon" className="hidden md:flex">
             <Bell className="h-5 w-5" />
           </Button>
 

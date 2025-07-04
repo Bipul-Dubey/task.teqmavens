@@ -9,8 +9,8 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { Card, CardContent } from "@/components/ui/card";
-// import { useTheme } from "next-themes";
+import { CardContent } from "@/components/ui/card";
+import { useTheme } from "next-themes";
 
 const data = [
   { month: "Jan", value: 589.12 },
@@ -28,8 +28,7 @@ const data = [
 ];
 
 export default function MonthlyRevenueChart() {
-  // const { theme } = useTheme();
-  const theme = "dark";
+  const { theme } = useTheme();
 
   const barColor = theme === "dark" ? "#8378FF" : "#6366f1";
 

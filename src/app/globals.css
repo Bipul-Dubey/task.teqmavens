@@ -46,7 +46,7 @@
 }
 
 :root {
-  --b-background: oklch(1 0 0);
+  --b-background: oklch(0.985 0 0);
   --highlight-blue: oklch(0.55 0.2 282.5);
   --radius: 0.625rem;
   --background: oklch(1 0 0);

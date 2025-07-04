@@ -3,6 +3,7 @@
 import { PieChart, Pie, Cell, Label, ResponsiveContainer } from "recharts";
 import { Card, CardContent } from "@/components/ui/card";
 import * as React from "react";
+import { useTheme } from "next-themes";
 
 const data = [
   { name: "New", value: 50, color: "#f87171" }, // Red
@@ -42,9 +43,9 @@ const renderCustomLabel = ({
 
 export function OrderStatusPieChart() {
   const total = data.reduce((sum, d) => sum + d.value, 0);
-
+  const { theme } = useTheme();
   return (
-    <Card className="bg-transparent border-0 p-0 w-fit">
+    <Card className="bg-transparent border-0 shadow-none p-0 w-fit">
       <CardContent className="flex items-center justify-center p-1">
         <ResponsiveContainer width={250} height={250}>
           <PieChart>
@@ -70,7 +71,7 @@ export function OrderStatusPieChart() {
                 value={total}
                 position="center"
                 style={{
-                  fill: "white",
+                  fill: theme === "dark" ? "white" : "black",
                   fontSize: "24px",
                   fontWeight: 700,
                 }}

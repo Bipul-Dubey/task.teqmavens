@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useRef } from "react";
-import { CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import {
   ChevronLeft,
@@ -25,7 +24,7 @@ const cards: SectionCardProps[] = [
     percentage: 28,
   },
   {
-    icon: "/icons/taken_icon.png",
+    icon: "/icons/taken_icon.svg",
     title: "Total Taken",
     value: 123,
     percentage: -15,
@@ -62,7 +61,11 @@ const SectionCard: React.FC<SectionCardProps> = ({
   return (
     <div className="w-[300px] rounded-2xl overflow-hidden bg-b-background border border-border shrink-0">
       <div className="p-4 flex gap-4 bg-background">
-        <Image src={icon} height={48} width={48} alt={title} />
+        <div className="p-[1.5px] rounded-[12px] bg-gradient-to-br from-pink-500 via-fuchsia-500 to-orange-400 inline-block w-14 h-14">
+          <div className="bg-background rounded-[10px] w-full h-full flex items-center justify-center">
+            <Image src={icon} height={24} width={24} alt={title} />
+          </div>
+        </div>
         <div className="flex flex-col justify-center">
           <p className="text-sm text-foreground">{title}</p>
           <p className="text-2xl font-semibold text-foreground">{value}</p>

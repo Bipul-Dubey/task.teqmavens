@@ -90,7 +90,7 @@ const OrderStatus = () => {
             <SelectTrigger className="w-[100px] h-9 px-3 text-sm border  bg-background/40 hover:bg-background/60 transition">
               <div className="flex items-center justify-between w-full">
                 <SelectValue />
-                <CalendarDays className="h-4 w-4 text-white ml-2" />
+                <CalendarDays className="h-4 w-4 text-foreground ml-2" />
               </div>
             </SelectTrigger>
             <SelectContent>
@@ -109,9 +109,9 @@ const OrderStatus = () => {
             const isRightCol = index % 2 === 1;
             const isBottomRow = index >= 4;
             const borderClasses = [
-              !isRightCol && "border-r",
-              !isBottomRow && "border-b",
-              "border-muted",
+              !isRightCol && "border-r-2",
+              !isBottomRow && "border-b-2",
+              "",
             ]
               .filter(Boolean)
               .join(" ");
