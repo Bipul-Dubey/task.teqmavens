@@ -3,6 +3,7 @@
 import { Customer } from "@/components/common";
 import { DataTable } from "@/components/Table";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 const RecentTransactions = () => {
   return (
@@ -30,15 +31,25 @@ const RecentTransactions = () => {
           transactionId: "#123-456-7890",
           product: (
             <div className="flex items-center gap-2">
-              <img
-                src="/products/iphone.png"
+              <Image
+                height={10}
+                width={10}
+                src="/icons/iphone.svg"
                 alt="iPhone"
                 className="h-5 w-5"
               />
               <span className="truncate max-w-[160px]">iPhone 15 pro max</span>
             </div>
           ),
-          channel: <img src="/channels/ebay.svg" alt="ebay" className="h-5" />,
+          channel: (
+            <Image
+              height={10}
+              width={10}
+              src="/icons/ebay.svg"
+              alt="ebay"
+              className="h-5"
+            />
+          ),
           customer: <Customer name="Gabriella Golden" />,
           total: "$400.00",
         },
@@ -46,8 +57,10 @@ const RecentTransactions = () => {
           transactionId: "#123-456-7890",
           product: (
             <div className="flex items-center gap-2">
-              <img
-                src="/products/tshirt.png"
+              <Image
+                height={10}
+                width={10}
+                src="/icons/white-tshirt.svg"
                 alt="Tshirt"
                 className="h-5 w-5"
               />
@@ -57,7 +70,13 @@ const RecentTransactions = () => {
             </div>
           ),
           channel: (
-            <img src="/channels/walmart.svg" alt="Walmart" className="h-5" />
+            <Image
+              height={10}
+              width={10}
+              src="/icons/walmart.svg"
+              alt="Walmart"
+              className="h-5"
+            />
           ),
           customer: <Customer name="Harris Santana" />,
           total: "$151.00",
@@ -66,8 +85,10 @@ const RecentTransactions = () => {
           transactionId: "#123-456-7890",
           product: (
             <div className="flex items-center gap-2">
-              <img
-                src="/products/perfume.png"
+              <Image
+                height={10}
+                width={10}
+                src="/icons/perfume.svg"
                 alt="Perfume"
                 className="h-5 w-5"
               />
@@ -77,7 +98,13 @@ const RecentTransactions = () => {
             </div>
           ),
           channel: (
-            <img src="/channels/facebook.svg" alt="Facebook" className="h-5" />
+            <Image
+              height={10}
+              width={10}
+              src="/icons/facebook.svg"
+              alt="Facebook"
+              className="h-5"
+            />
           ),
           customer: <Customer name="Lilia Ponce" />,
           total: "$167.00",
@@ -86,8 +113,10 @@ const RecentTransactions = () => {
           transactionId: "#123-456-7890",
           product: (
             <div className="flex items-center gap-2">
-              <img
-                src="/products/samsung.png"
+              <Image
+                height={10}
+                width={10}
+                src="/icons/samsung.svg"
                 alt="Samsung"
                 className="h-5 w-5"
               />
@@ -97,7 +126,13 @@ const RecentTransactions = () => {
             </div>
           ),
           channel: (
-            <img src="/channels/amazon.svg" alt="Amazon" className="h-5" />
+            <Image
+              height={10}
+              width={10}
+              src="/icons/amazon.svg"
+              alt="Amazon"
+              className="h-5"
+            />
           ),
           customer: <Customer name="Rehan Chase" />,
           total: "$262.00",
@@ -106,15 +141,25 @@ const RecentTransactions = () => {
           transactionId: "#123-456-7890",
           product: (
             <div className="flex items-center gap-2">
-              <img
-                src="/products/lipstick.png"
+              <Image
+                height={10}
+                width={10}
+                src="/icons/lipstick.svg"
                 alt="Lipstick"
                 className="h-5 w-5"
               />
               <span className="truncate max-w-[160px]">Nykaa Red lipstick</span>
             </div>
           ),
-          channel: <img src="/channels/etsy.svg" alt="Etsy" className="h-5" />,
+          channel: (
+            <Image
+              height={10}
+              width={10}
+              src="/icons/etsy.svg"
+              alt="Etsy"
+              className="h-5"
+            />
+          ),
           customer: <Customer name="Maxim Bray" />,
           total: "$319.00",
         },

@@ -4,6 +4,7 @@ import { PieChart, Pie, Cell, Label, ResponsiveContainer } from "recharts";
 import { Card, CardContent } from "@/components/ui/card";
 import * as React from "react";
 import { useTheme } from "next-themes";
+import { PieLabelRenderProps } from "recharts";
 
 const data = [
   { name: "New", value: 50, color: "#f87171" }, // Red
@@ -19,13 +20,14 @@ const renderCustomLabel = ({
   cx,
   cy,
   midAngle,
-  innerRadius,
-  outerRadius,
+  innerRadius = 0,
+  outerRadius = 0,
   percent,
-}: any) => {
-  const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
-  const x = cx + radius * Math.cos(-midAngle * RADIAN);
-  const y = cy + radius * Math.sin(-midAngle * RADIAN);
+}: PieLabelRenderProps) => {
+  const radius =
+    Number(innerRadius) + (Number(outerRadius) - Number(innerRadius)) * 0.5;
+  const x = Number(cx) + radius * Math.cos(-midAngle * RADIAN);
+  const y = Number(cy) + radius * Math.sin(-midAngle * RADIAN);
 
   return (
     <text
@@ -36,7 +38,7 @@ const renderCustomLabel = ({
       dominantBaseline="central"
       className="text-sm font-semibold"
     >
-      {`${(percent * 100).toFixed(0)}%`}
+      {`${((percent ?? 0) * 100).toFixed(0)}%`}
     </text>
   );
 };

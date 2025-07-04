@@ -2,6 +2,7 @@
 
 import { DataTable } from "@/components/Table";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 const TopSellingProducts = () => {
   return (
@@ -28,8 +29,10 @@ const TopSellingProducts = () => {
         {
           product: (
             <div className="flex items-center gap-2">
-              <img
-                src="/products/iphone.png"
+              <Image
+                height={10}
+                width={10}
+                src="/icons/iphone.svg"
                 alt="iPhone"
                 className="h-5 w-5"
               />
@@ -44,10 +47,12 @@ const TopSellingProducts = () => {
         {
           product: (
             <div className="flex items-center gap-2">
-              <img
-                src="/products/tshirt.png"
+              <Image
+                src="/icons/white-tshirt.svg"
                 alt="T-shirt"
                 className="h-5 w-5"
+                height={10}
+                width={10}
               />
               <span className="truncate max-w-[160px]">
                 White Danim Tshit M Size
@@ -62,8 +67,10 @@ const TopSellingProducts = () => {
         {
           product: (
             <div className="flex items-center gap-2">
-              <img
-                src="/products/perfume.png"
+              <Image
+                height={10}
+                width={10}
+                src="/icons/perfume.svg"
                 alt="Perfume"
                 className="h-5 w-5"
               />
@@ -80,8 +87,10 @@ const TopSellingProducts = () => {
         {
           product: (
             <div className="flex items-center gap-2">
-              <img
-                src="/products/samsung.png"
+              <Image
+                height={10}
+                width={10}
+                src="/icons/samsung.svg"
                 alt="Samsung"
                 className="h-5 w-5"
               />
@@ -98,8 +107,10 @@ const TopSellingProducts = () => {
         {
           product: (
             <div className="flex items-center gap-2">
-              <img
-                src="/products/lipstick.png"
+              <Image
+                height={10}
+                width={10}
+                src="/icons/lipstick.svg"
                 alt="Lipstick"
                 className="h-5 w-5"
               />
@@ -114,8 +125,10 @@ const TopSellingProducts = () => {
         {
           product: (
             <div className="flex items-center gap-2">
-              <img
-                src="/products/iphone.png"
+              <Image
+                height={10}
+                width={10}
+                src="/icons/iphone.svg"
                 alt="iPhone"
                 className="h-5 w-5"
               />
@@ -130,10 +143,12 @@ const TopSellingProducts = () => {
         {
           product: (
             <div className="flex items-center gap-2">
-              <img
-                src="/products/tshirt.png"
+              <Image
+                src="/icons/white-tshirt.svg"
                 alt="T-shirt"
                 className="h-5 w-5"
+                height={10}
+                width={10}
               />
               <span className="truncate max-w-[160px]">
                 White Danim Tshit M...

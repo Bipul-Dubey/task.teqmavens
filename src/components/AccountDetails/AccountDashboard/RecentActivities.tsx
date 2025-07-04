@@ -1,5 +1,6 @@
 import { CustomTabs } from "@/components/common/CustomTabs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Image from "next/image";
 import React from "react";
 
 // Type definitions
@@ -147,10 +148,12 @@ const RecentActivities: React.FC = () => {
                   <div
                     className={`w-6 h-6 flex items-center justify-center ${activity.icon.bg} rounded-full`}
                   >
-                    <img
+                    <Image
                       src={activity.icon.src}
                       className="w-4 h-4"
                       alt="icon"
+                      height={10}
+                      width={10}
                     />
                   </div>
                   {activityIndex === 0 && sectionIndex === 0 && (
@@ -179,10 +182,12 @@ const RecentActivities: React.FC = () => {
                           className="flex items-center gap-2 text-sm text-muted-foreground"
                         >
                           <div className="w-6 h-6 flex items-center justify-center bg-muted rounded-full">
-                            <img
+                            <Image
                               src="/back-2-fill.svg"
                               className="w-4 h-4"
                               alt="reply icon"
+                              height={10}
+                              width={10}
                             />
                           </div>
                           <div>
