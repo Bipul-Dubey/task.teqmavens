@@ -12,7 +12,6 @@ Follow the steps below to set up and run the project locally.
 git clone https://github.com/Bipul-Dubey/task.teqmavens.git
 ```
 
-````
 
 ### 📁 Move to Project Directory
 
@@ -65,12 +64,3 @@ yarn dev
 - 🧪 Easy to Extend and Maintain
 - 📱 Mobile-First Design
 - 🧰 Developer Friendly Setup
-## 🔍 UI Previews
-
-![Dashboard View](https://user-images.githubusercontent.com/12345678/abcdef123456.png)
-![Order Summary](https://user-images.githubusercontent.com/12345678/abcdef234567.png)
-![Mobile View](https://user-images.githubusercontent.com/12345678/abcdef345678.png)
-![Chart Section](https://user-images.githubusercontent.com/12345678/abcdef456789.png)
-![Tabs](https://user-images.githubusercontent.com/12345678/abcdef567890.png)
-![Dark Mode Preview](https://user-images.githubusercontent.com/12345678/abcdef678901.png)
-````
