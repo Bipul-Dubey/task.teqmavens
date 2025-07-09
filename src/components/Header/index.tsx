@@ -6,12 +6,16 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { Avatar, AvatarFallback } from "../ui/avatar";
 import { useTheme } from "next-themes";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Header = () => {
   const { theme, setTheme } = useTheme();
   const isDark = theme === "dark";
   const [open, setOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState<boolean>(false);
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-b-light-background">
@@ -83,16 +87,9 @@ const Header = () => {
         {/* Desktop Logo */}
         <div className="hidden md:flex items-center">
           <div className="relative w-[150px] h-[40px]">
-            {isDark ? (
+            {isMounted && (
               <Image
-                src={`/company_logo_dark.svg`}
-                alt="Logo"
-                fill
-                className="object-contain"
-              />
-            ) : (
-              <Image
-                src={`/company_logo_light.svg`}
+                src={`/company_logo_${isDark ? "dark" : "light"}.svg`}
                 alt="Logo"
                 fill
                 className="object-contain"
@@ -122,11 +119,12 @@ const Header = () => {
             className="hidden md:flex"
             onClick={() => setTheme(isDark ? "light" : "dark")}
           >
-            {isDark ? (
-              <Sun className="h-5 w-5" />
-            ) : (
-              <Moon className="h-5 w-5" />
-            )}
+            {isMounted &&
+              (isDark ? (
+                <Sun className="h-5 w-5" />
+              ) : (
+                <Moon className="h-5 w-5" />
+              ))}
           </Button>
 
           {/* Notification */}

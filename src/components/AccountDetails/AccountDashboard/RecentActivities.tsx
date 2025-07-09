@@ -55,6 +55,25 @@ const recentActivities: RecentActivitySection[] = [
         ],
       },
       {
+        icon: { bg: "bg-[#F4A120]" },
+        content: [
+          {
+            primary: "Christian Wood",
+            action: "Sent Message to",
+            secondary: "Nikita Houston",
+            time: "1 min ago",
+            replies: [
+              {
+                from: "Nikita Houston",
+                message: "Replay your message",
+                quote: '"Hello"',
+                time: "1 min ago",
+              },
+            ],
+          },
+        ],
+      },
+      {
         icon: { bg: "bg-[#E24C5B]" },
         content: [
           {
@@ -155,7 +174,7 @@ const RecentActivities: React.FC = () => {
                       width={10}
                     />
                   </div>
-                  {activityIndex === 0 && sectionIndex === 0 && (
+                  {activityIndex !== section.activities.length - 1 && (
                     <div className="absolute left-1/2 top-6 h-10 w-px -translate-x-1/2 bg-border" />
                   )}
                 </div>
